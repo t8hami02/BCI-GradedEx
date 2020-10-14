@@ -45,6 +45,7 @@ app.post('/login', passport.authenticate('basic', { session: false }), (req, res
 
 })
 
+//wasn't able to finish this at the time limit
 app.get('/posts',  (req, res) => {
 
     res.json(posts.getAllPosts());
@@ -140,12 +141,6 @@ app.delete('/posts/:postId', passport.authenticate('basic', { session: false }),
     } else {
         res.sendStatus(404);
     }
-})
-
-app.get('/users', (req, res) => {
-
-    res.json(users.getAllUsers());
-
 })
 
 //user registration
